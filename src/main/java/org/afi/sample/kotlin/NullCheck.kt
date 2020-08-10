@@ -5,6 +5,17 @@ fun main() {
     assert(fullName == "José Silva")
 
     // concatName("José", null) //Don`t compile
+
+    nullAutomaticCasts("foo")
 }
 
 fun concatName(firstName: String, lastName: String) = "$firstName $lastName"
+
+fun nullAutomaticCasts(inputString: String?) {
+    if (inputString != null) {
+        val str: String = inputString
+        assert(str == inputString)
+    } else {
+        // val str: String = inputString //Don`t compile
+    }
+}
