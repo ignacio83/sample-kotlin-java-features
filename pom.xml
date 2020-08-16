@@ -12,8 +12,8 @@
     <properties>
         <kotlin.version>1.3.72</kotlin.version>
         <ktlint.version>0.37.2</ktlint.version>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>14</maven.compiler.source>
         <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
         <org.eclipse.jdt.annotation.version>2.2.600</org.eclipse.jdt.annotation.version>
     </properties>
