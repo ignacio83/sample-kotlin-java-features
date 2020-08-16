@@ -2,24 +2,10 @@ package org.afi.sample.kotlin
 
 fun main() {
     createReadOnlyPerson()
-    createReadOnlyPersonFromMutableList()
     createImmutablePerson()
 }
 
 fun createReadOnlyPerson() {
-    val person = PersonReadOnly("José da Silva", listOf("11-234-5678", "11-99876-5432"))
-    // person.phones += "11-5555-5555" //Don`t compile
-    assert("José da Silva" == person.fullName)
-    assert(2 == person.phones.size)
-
-    assert(
-            runCatching {
-                (person.phones as MutableList<String>) += "11-6666-6666"
-            }.isFailure
-    )
-}
-
-fun createReadOnlyPersonFromMutableList() {
     val phones = ArrayList<String>()
     phones += "11-234-5678"
     phones += "11-99876-5432"
@@ -49,11 +35,11 @@ fun createImmutablePerson() {
     phones += "11-5555-5555"
     assert(2 == person.phones.size)
 
-    assert(
-            runCatching {
-                (person.phones as MutableList<String>) += "11-6666-6666"
-            }.isFailure
-    )
+    val success = runCatching {
+        (person.phones as MutableList<String>) += "11-6666-6666"
+    }.isFailure
+
+    assert(!success)
 }
 
 class PersonReadOnly(val fullName: String, val phones: List<String>)

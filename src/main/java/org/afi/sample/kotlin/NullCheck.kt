@@ -1,15 +1,16 @@
 package org.afi.sample.kotlin
 
 fun main() {
-    val fullName = concatName("José", "Silva")
+    val fullName = concatName("José", null, "Silva")
     assert(fullName == "José Silva")
 
-    // concatName("José", null) //Don`t compile
+    // concatName("José", null, null) //Don`t compile
 
     nullAutomaticCasts("foo")
 }
 
-fun concatName(firstName: String, lastName: String) = "$firstName $lastName"
+fun concatName(firstName: String, middleName: String?, lastName: String) =
+        "$firstName ${middleName ?: ""} $lastName"
 
 fun nullAutomaticCasts(inputString: String?) {
     if (inputString != null) {
