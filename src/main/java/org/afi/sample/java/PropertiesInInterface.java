@@ -1,13 +1,15 @@
 package org.afi.sample.java;
 
-// Possible, but is not the same thing
+// Works, but is not the same thing
 public class PropertiesInInterface {
 
     public static void main(String... args) {
         var car = new Car("Fusca");
+        assert car.getName().equals("Fusca");
         assert car.getWheelsQty() == 4;
 
         var motorcycle = new Motorcycle("Bis");
+        assert motorcycle.getName().equals("Bis");
         assert motorcycle.getWheelsQty() == 2;
     }
 
