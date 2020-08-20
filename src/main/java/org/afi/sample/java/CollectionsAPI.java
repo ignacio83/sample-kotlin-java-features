@@ -2,6 +2,7 @@ package org.afi.sample.java;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class CollectionsAPI {
 
@@ -13,7 +14,28 @@ public class CollectionsAPI {
     }
 
     public static void sequenceSample() {
-        // Not supported
+        var allNumbers = IntStream.range(1, Integer.MAX_VALUE);
+        final var list = allNumbers
+                .filter(number -> number % 3 == 0)
+                .mapToObj(String::valueOf)
+                .limit(3)
+                .collect(Collectors.toList());
+
+        assert list.get(0).equals("3");
+        assert list.get(1).equals("6");
+        assert list.get(2).equals("9");
+
+        assert list.size() == 3;
+        System.out.println("First three multiples: " + list);
+
+        allNumbers = IntStream.range(1, Integer.MAX_VALUE);
+        var last = allNumbers
+                .filter(number -> number % 3 == 0)
+                .limit(3)
+                .reduce((first, second) -> second);
+
+        assert last.isPresent() && last.getAsInt() == 9;
+        System.out.println("Third multiple of three: " + last.getAsInt());
     }
 
     public static void groupBySample() {

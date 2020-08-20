@@ -1,5 +1,5 @@
 package org.afi.sample.java;
 
-public class FunctionalProgramming {
+public class ScopingFunctions {
     // Not supported
 }

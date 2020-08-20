@@ -8,15 +8,15 @@ fun main() {
 
     // Complex
     findPerson()
-            .apply {
-                fullName = "Jonas Souza"
-                phone = "11-2345678"
-                zipCode = "11111"
-            }
-            .let(::savePerson)
-            .also {
-                assert(it.fullName == "Jonas Souza")
-            }
+        .apply {
+            fullName = "Jonas Souza"
+            phone = "11-2345678"
+            zipCode = "11111"
+        }
+        .let(::savePerson)
+        .also {
+            assert(it.fullName == "Jonas Souza")
+        }
 }
 
 fun findFullName(): String? {

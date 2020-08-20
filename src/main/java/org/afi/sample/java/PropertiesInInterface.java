@@ -3,53 +3,53 @@ package org.afi.sample.java;
 // Possible, but is not the same thing
 public class PropertiesInInterface {
 
-	public static void main(String... args) {
-		var car = new Car("Fusca");
-		assert car.getWheelsQty() == 4;
+    public static void main(String... args) {
+        var car = new Car("Fusca");
+        assert car.getWheelsQty() == 4;
 
-		var motorcycle = new Motorcycle("Bis");
-		assert motorcycle.getWheelsQty() == 2;
-	}
+        var motorcycle = new Motorcycle("Bis");
+        assert motorcycle.getWheelsQty() == 2;
+    }
 
-	public interface Vehicle {
-		String getName();
+    public interface Vehicle {
+        String getName();
 
-		Integer getWheelsQty();
-	}
+        Integer getWheelsQty();
+    }
 
-	public static class Car implements Vehicle {
-		private final String name;
+    public static class Car implements Vehicle {
+        private final String name;
 
-		public Car(String name) {
-			this.name = name;
-		}
+        public Car(String name) {
+            this.name = name;
+        }
 
-		@Override
-		public String getName() {
-			return name;
-		}
+        @Override
+        public String getName() {
+            return name;
+        }
 
-		@Override
-		public Integer getWheelsQty() {
-			return 4;
-		}
-	}
+        @Override
+        public Integer getWheelsQty() {
+            return 4;
+        }
+    }
 
-	public static class Motorcycle implements Vehicle {
-		private final String name;
+    public static class Motorcycle implements Vehicle {
+        private final String name;
 
-		public Motorcycle(String name) {
-			this.name = name;
-		}
+        public Motorcycle(String name) {
+            this.name = name;
+        }
 
-		@Override
-		public String getName() {
-			return name;
-		}
+        @Override
+        public String getName() {
+            return name;
+        }
 
-		@Override
-		public Integer getWheelsQty() {
-			return 2;
-		}
-	}
+        @Override
+        public Integer getWheelsQty() {
+            return 2;
+        }
+    }
 }

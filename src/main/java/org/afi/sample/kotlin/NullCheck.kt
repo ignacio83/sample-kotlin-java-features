@@ -10,7 +10,7 @@ fun main() {
 }
 
 fun concatName(firstName: String, middleName: String?, lastName: String) =
-        "$firstName ${middleName ?: ""} $lastName"
+    "$firstName ${middleName ?: ""} $lastName"
 
 fun nullAutomaticCasts(inputString: String?) {
     if (inputString != null) {

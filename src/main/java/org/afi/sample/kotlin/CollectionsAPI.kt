@@ -22,6 +22,13 @@ fun sequenceSample() {
 
     assert(list.count() == 3)
     println("First three multiples: $list")
+
+    val last = allNumbers
+        .take(3)
+        .findLast { it % 3 == 0 }
+
+    assert(last == 9)
+    println("Third multiple of three: $last")
 }
 
 fun groupBySample() {
