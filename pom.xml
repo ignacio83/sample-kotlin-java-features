@@ -108,7 +108,7 @@
                 <executions>
                     <execution>
                         <id>ktlint</id>
-                        <phase>verify</phase>
+                        <phase>compile</phase>
                         <configuration>
                             <target name="ktlint">
                                 <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
