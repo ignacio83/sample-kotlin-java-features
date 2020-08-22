@@ -11,7 +11,7 @@
 
     <properties>
         <kotlin.version>1.4.0</kotlin.version>
-        <ktlint.version>0.37.2</ktlint.version>
+        <ktlint.version>0.38.0</ktlint.version>
         <kotlinx-coroutines-core.version>1.3.9</kotlinx-coroutines-core.version>
         <maven.compiler.target>14</maven.compiler.target>
         <maven.compiler.source>14</maven.compiler.source>
