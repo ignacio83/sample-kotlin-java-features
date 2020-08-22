@@ -1,8 +1,8 @@
 package org.afi.sample.kotlin
 
-import org.afi.sample.java.NullCheck
 import java.io.IOException
 import java.text.SimpleDateFormat
+import org.afi.sample.java.NullCheck
 
 fun main() {
     NullCheck.main()
